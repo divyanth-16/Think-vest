@@ -15,7 +15,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${inter.className}`}
-      ><Header/>
+      >
+        {/* Add components tag here! */}
+        <Header/>
         {/* {header} */}
         <main className="min-h-screen">{children}</main>
         {/* {footer} */}
