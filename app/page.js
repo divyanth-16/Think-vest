@@ -1,12 +1,10 @@
-import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
     <>
-    <div className="mt-40">
-      <Button variant = "destructive">
-        This is Homepage 
-      </Button>
+    <div className=" bg-amber-900">
+      Hello this is Hero section.
     </div>
     </>
   );

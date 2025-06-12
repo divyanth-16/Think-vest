@@ -5,7 +5,7 @@ import { Button } from "./ui/button"
 
 const Header = () => {
   return (
-    <div className="fixed top-0 w-full">
+    <div >
         <nav className="flex items-center justify-between mx-auto container px-4 py-5 bg-blue-200">
             <Link href="/">
              <Image
