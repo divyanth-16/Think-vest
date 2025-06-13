@@ -1,5 +1,5 @@
 'use client';
-gggimport React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Sparkles, Receipt, Wallet, CreditCard, Globe, Lightbulb } from 'lucide-react';
 
 const features = [
