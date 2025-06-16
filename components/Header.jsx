@@ -2,8 +2,12 @@ import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@cl
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "./ui/button"
+import { checkUser } from "@/lib/checkUser"
 
-const Header = () => {
+const Header = async () => {
+  
+await checkUser()
+
   return (
     <div >
         <nav className="flex items-center justify-between mx-auto container px-4 py-5 bg-blue-200">
