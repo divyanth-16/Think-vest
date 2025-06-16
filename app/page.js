@@ -1,10 +1,8 @@
-
-
 export default function Home() {
   return (
     <>
-    <div className="bg-amber-600">
-      Hello
+    <div>
+      <h1>Hello</h1>
     </div>
     </>
   );
