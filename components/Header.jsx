@@ -8,7 +8,7 @@ const Header = async () => {
 await checkUser()
 
   return (
-    <div >
+    <div>
         <nav>
             <Link href="/">
              <p>
@@ -18,7 +18,7 @@ await checkUser()
         
         <SignedOut>
           <SignInButton >
-            <button>Login</button>
+            <button className="bg-amber-300">Login</button>
             </SignInButton>
             </SignedOut>
             <SignedIn>
