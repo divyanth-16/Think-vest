@@ -6,7 +6,6 @@ const Header = async () => {
   await checkUser();
 
   return (
-<<<<<<< HEAD
     <header className="w-full px-6 py-4 bg-gradient-to-r from-[#434343] via-[#222222] to-[#434343] text-white shadow-xl">
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
@@ -16,29 +15,6 @@ const Header = async () => {
         >
           FinTrack<span className="text-gray-400">.</span>
         </Link>
-=======
-    <div>
-        <nav>
-            <Link href="/">
-             <p>
-              Logo.
-             </p>
-            </Link>
-        
-        <SignedOut>
-          <SignInButton forceRedirectUrl="/dashboard" >
-            <button className="bg-amber-300">Login</button>
-            </SignInButton>
-            </SignedOut>
-            <SignedIn>
-              <UserButton 
-              />
-            </SignedIn>
-            </nav>
-    </div>
-  )
-}
->>>>>>> e973bd4fa652d5927a64e644e394b40e7b8cb964
 
         {/* Right Side Buttons */}
         <div className="flex items-center gap-4">
