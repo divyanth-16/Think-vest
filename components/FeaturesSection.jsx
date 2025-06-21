@@ -1,102 +1,71 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Sparkles, Receipt, Wallet, CreditCard, Globe, Lightbulb } from 'lucide-react';
+import React from "react";
+import { Sparkles, Receipt, Wallet, CreditCard, Globe, Lightbulb } from "lucide-react";
+import { motion as fm } from "framer-motion";
 
 const features = [
   {
     title: "Deep Financial Insights",
-    icon: <Sparkles className="h-8 w-8 text-purple-700 z-10" />,
-    bg: "from-purple-100 to-purple-300",
+    icon: <Sparkles size={28} className="text-black" />,
+    description: "Get AI-driven breakdowns of where your money goes and uncover hidden trends in your expenses.",
   },
   {
     title: "Intelligent Receipt Scanner",
-    icon: <Receipt className="h-8 w-8 text-pink-700 z-10" />,
-    bg: "from-pink-100 to-pink-300",
+    icon: <Receipt size={28} className="text-black" />,
+    description: "Snap a photo and let the AI auto-capture and categorize your receipts in seconds.",
   },
   {
     title: "Smart Budgeting Assistant",
-    icon: <Wallet className="h-8 w-8 text-blue-700 z-10" />,
-    bg: "from-blue-100 to-blue-300",
+    icon: <Wallet size={28} className="text-black" />,
+    description: "Design and monitor custom budgets with personalized, adaptive suggestions.",
   },
   {
     title: "Unified Account Access",
-    icon: <CreditCard className="h-8 w-8 text-green-700 z-10" />,
-    bg: "from-green-100 to-green-300",
+    icon: <CreditCard size={28} className="text-black" />,
+    description: "Link and manage multiple banks and cards from one secure dashboard.",
   },
   {
     title: "Global Currency Support",
-    icon: <Globe className="h-8 w-8 text-yellow-700 z-10" />,
-    bg: "from-yellow-100 to-yellow-300",
+    icon: <Globe size={28} className="text-black" />,
+    description: "Seamlessly manage finances across different countries and currencies.",
   },
   {
     title: "Proactive AI Tips",
-    icon: <Lightbulb className="h-8 w-8 text-orange-700 z-10" />,
-    bg: "from-orange-100 to-orange-300",
+    icon: <Lightbulb size={28} className="text-black" />,
+    description: "Receive actionable tips and financial nudges to keep your goals on track.",
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
-  },
-};
-
 const FeaturesSection = () => {
   return (
-    <section className="bg-gradient-to-br from-[#f5f3ff] to-[#e0e7ff] py-24 px-6 text-center text-gray-800">
-      <motion.h2
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-        className="text-4xl md:text-5xl font-extrabold mb-14 tracking-tight bg-gradient-to-r from-purple-700 to-indigo-500 text-transparent bg-clip-text"
-      >
-        Everything You Need to Master Your Money
-      </motion.h2>
+    <section className="bg-gradient-to-b from-[#434343] to-[#000000] py-20 px-6">
+      <div className="max-w-7xl mx-auto text-center mb-14">
+        <fm.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-bold mb-4 text-white"
+        >
+          Everything You Need to Master Your Money
+        </fm.h2>
+      </div>
 
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
-      >
-        {features.map((feat, idx) => (
-          <motion.div
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {features.map((feature, idx) => (
+          <fm.div
             key={idx}
-            variants={itemVariants}
-            whileHover={{ scale: 1.05 }}
-            className="relative bg-white rounded-3xl p-8 shadow-xl transition-transform duration-300 overflow-hidden cursor-default"
+            className="bg-white p-6 rounded-2xl shadow-xl hover:shadow-gray-500/40 transition duration-300"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: idx * 0.1 }}
           >
-            {/* Gradient blob bg */}
-            <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-br ${feat.bg} opacity-20 blur-2xl rounded-3xl z-0`} />
-
-            {/* Icon */}
-            <div className="relative z-10 mb-4 flex items-center justify-center">
-              <div className="bg-white p-4 rounded-full shadow-md">
-                {feat.icon}
-              </div>
-            </div>
-
-            {/* Title */}
-            <h3 className="relative z-10 text-xl font-semibold">{feat.title}</h3>
-          </motion.div>
+            <div className="mb-4">{feature.icon}</div>
+            <h3 className="text-xl font-semibold mb-2 text-black">{feature.title}</h3>
+            <p className="text-sm text-gray-800">{feature.description}</p>
+          </fm.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };
