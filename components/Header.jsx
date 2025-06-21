@@ -17,7 +17,7 @@ await checkUser()
             </Link>
         
         <SignedOut>
-          <SignInButton >
+          <SignInButton forceRedirectUrl="/dashboard" >
             <button className="bg-amber-300">Login</button>
             </SignInButton>
             </SignedOut>
