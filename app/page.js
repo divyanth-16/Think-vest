@@ -1,10 +1,14 @@
+import FeaturesSection from "@/components/FeaturesSection";
+import HeroSection from "@/components/HeroSection";
+import  Footer  from "@/components/Footer";
+
 export default function Home() {
   return (
-    <>
-    <div>
-      <h1>Hello</h1>
-      <p>I am not gay</p>
-    </div>
-    </>
+    <main>
+      <HeroSection />
+      <FeaturesSection/>
+      <Footer/>
+
+    </main>
   );
 }
