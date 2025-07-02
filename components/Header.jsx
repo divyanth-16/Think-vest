@@ -19,9 +19,8 @@ const Header = async () => {
         {/* Right Side Buttons */}
         <div className="flex items-center gap-4">
           <SignedOut>
-            <SignInButton>
+            <SignInButton forceRedirectUrl="/dashboard">
               <button className="relative flex items-center gap-3 px-8 py-3 text-lg font-semibold text-white uppercase transition-transform transform rounded-xl group hover:scale-105 active:scale-95 backdrop-blur-md bg-white/10 border border-gray-400 shadow-[0_0_20px_#9ca3af66] hover:shadow-[0_0_30px_#9ca3af]">
-
                 {/* Neon glow pulse layer */}
                 <span className="absolute inset-0 animate-pulse bg-gradient-to-br from-gray-400/20 to-gray-600/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></span>
 
@@ -50,7 +49,33 @@ const Header = async () => {
           </SignedOut>
 
           <SignedIn>
-            <UserButton afterSignOutUrl="/" />
+            <Link
+              href="/dashboard"
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            >
+              Dashboard
+            </Link>
+            <Link
+              href="/transaction/create"
+              className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            >
+              Add Transaction
+            </Link>
+
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: {
+                    width: "2.5rem",
+                    height: "2.5rem",
+                  },
+                  avatarImage: {
+                    width: "2.5rem",
+                    height: "2.5rem",
+                  },
+                },
+              }}
+            />
           </SignedIn>
         </div>
       </nav>
