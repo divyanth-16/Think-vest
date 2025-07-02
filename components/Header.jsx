@@ -6,24 +6,24 @@ const Header = async () => {
   await checkUser();
 
   return (
-    <header className="w-full px-6 py-4 bg-gradient-to-r from-[#0a1d3b] via-[#0e3377] to-[#0a1d3b] text-white shadow-xl">
+    <header className="w-full px-6 py-4 bg-gradient-to-r from-[#434343] via-[#222222] to-[#434343] text-white shadow-xl">
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
-          className="text-3xl font-extrabold tracking-wide hover:text-cyan-400 transition-all duration-300"
+          className="text-3xl font-extrabold tracking-wide hover:text-gray-400 transition-all duration-300"
         >
-          FinTrack<span className="text-cyan-400">.</span>
+          FinTrack<span className="text-gray-400">.</span>
         </Link>
 
         {/* Right Side Buttons */}
         <div className="flex items-center gap-4">
           <SignedOut>
             <SignInButton>
-              <button className="relative flex items-center gap-3 px-8 py-3 text-lg font-semibold text-white uppercase transition-transform transform rounded-xl group hover:scale-105 active:scale-95 backdrop-blur-md bg-white/10 border border-cyan-400 shadow-[0_0_20px_#22d3ee66] hover:shadow-[0_0_30px_#22d3ee]">
+              <button className="relative flex items-center gap-3 px-8 py-3 text-lg font-semibold text-white uppercase transition-transform transform rounded-xl group hover:scale-105 active:scale-95 backdrop-blur-md bg-white/10 border border-gray-400 shadow-[0_0_20px_#9ca3af66] hover:shadow-[0_0_30px_#9ca3af]">
 
                 {/* Neon glow pulse layer */}
-                <span className="absolute inset-0 animate-pulse bg-gradient-to-br from-cyan-400/20 to-blue-600/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></span>
+                <span className="absolute inset-0 animate-pulse bg-gradient-to-br from-gray-400/20 to-gray-600/20 rounded-xl blur-sm group-hover:blur-md transition-all duration-300"></span>
 
                 {/* Icon */}
                 <svg

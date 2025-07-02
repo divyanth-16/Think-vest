@@ -1,19 +1,16 @@
+import FeaturesSection from "@/components/FeaturesSection";
+import HeroSection from "@/components/HeroSection";
+import  Footer  from "@/components/Footer";
 
-import React from 'react'
-import FeaturesSection from '@/components/FeaturesSection'
-import HeroSection from '@/components/HeroSection'
-import Footer from '@/components/Footer' 
-import Header from '@/components/Header'
-
-const page = () => {
+export default function Home() {
   return (
-    <div> 
+    <main>
       <HeroSection />
-      <FeaturesSection />
-      <Footer />
-      
-    </div>
-  )
+      <FeaturesSection/>
+      <Footer/>
+
+    </main>
+  );
 }
 
-export default page
+
