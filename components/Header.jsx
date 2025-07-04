@@ -49,18 +49,42 @@ const Header = async () => {
           </SignedOut>
 
           <SignedIn>
-            <Link
-              href="/dashboard"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-            >
-              Dashboard
-            </Link>
-            <Link
-              href="/transaction/create"
-              className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-            >
-              Add Transaction
-            </Link>
+          
+  {/* Dashboard Button */}
+
+  {/* Dashboard Button */}
+ <Link
+  href="/dashboard"
+  className="px-5 py-2 rounded-lg font-semibold text-white 
+             bg-gradient-to-r from-[#2d2d2d] to-[#1a1a1a] 
+             hover:from-[#3a3a3a] hover:to-[#1e1e1e]
+             shadow-[0_0_10px_rgba(255,255,255,0.05)]
+             hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]
+             transition-all duration-300 ease-in-out 
+             backdrop-blur-sm border border-[#3d3d3d] 
+             hover:scale-105"
+>
+  Dashboard
+</Link>
+
+<Link
+  href="/transaction/create"
+  className="px-5 py-2 rounded-lg font-semibold text-white 
+             bg-gradient-to-r from-[#28a745] to-[#34d058] 
+             hover:from-[#34d058] hover:to-[#28a745]
+             shadow-[0_0_10px_rgba(40,167,69,0.3)]
+             hover:shadow-[0_0_20px_rgba(40,167,69,0.6)]
+             transition-all duration-300 ease-in-out 
+             hover:scale-105"
+>
+  + Add Transaction
+</Link>
+
+
+
+
+
+
 
             <UserButton
               appearance={{
