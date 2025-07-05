@@ -9,7 +9,7 @@ export default async function DashboardPage() {
   return (
     <div className="min-h-screen text-white p-8 bg-[linear-gradient(to_right,_#2d2d2d,_#1a1a1a)]">
 
-      {/* 🔥 Fancy Dashboard Title */}
+      {/* 🔥 Fancy Dashboard Title  shazia*/}
       <h1 className="text-5xl font-extrabold mb-10 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-white drop-shadow-md">
         Dashboard
       </h1>
