@@ -49,18 +49,34 @@ const Header = async () => {
           </SignedOut>
 
           <SignedIn>
-            <Link
-              href="/dashboard"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-            >
-              Dashboard
-            </Link>
-            <Link
-              href="/transaction/create"
-              className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-            >
-              Add Transaction
-            </Link>
+        <div className="flex gap-4 mt-6">
+  {/* Dashboard Button */}
+  <Link
+    href="/dashboard"
+    className="px-6 py-2 rounded-xl font-semibold text-white 
+               bg-gradient-to-r from-[#3a3a3a] to-[#1a1a1a] 
+               shadow-md ring-1 ring-white/10
+               transition-all duration-300 ease-in-out
+               hover:scale-105 hover:bg-gradient-to-r hover:from-[#4b4b4b] hover:to-[#2a2a2a] 
+               hover:shadow-[0_0_18px_#ffffff40]"
+  >
+    Dashboard
+  </Link>
+
+  {/* Add Transaction Button */}
+  <Link
+    href="/transaction/create"
+    className="px-6 py-2 rounded-xl font-semibold text-white 
+               bg-gradient-to-r from-[#22c55e] to-[#15803d] 
+               shadow-md ring-1 ring-white/10
+               transition-all duration-300 ease-in-out
+               hover:scale-105 hover:from-[#34d399] hover:to-[#166534] 
+               hover:shadow-[0_0_25px_#22c55e80]"
+  >
+    + Add Transaction
+  </Link>
+</div>
+
 
             <UserButton
               appearance={{
