@@ -7,18 +7,16 @@ const AccountLine = ({ account }) => {
   const { name, type, balance, id } = account;
 
   return (
-    <div className="bg-[#1e1e1e] text-white rounded-xl shadow-md p-5 w-64 h-fit">
-      <div className="flex gap-3 items-start">
-        <input type="checkbox" className="mt-1 cursor-pointer" />
+    <div className="bg-white text-black rounded-lg shadow-md p-4 w-64 hover:scale-105 transition-transform">
+      <div className="flex items-start gap-2">
+        <input type="checkbox" className="mt-1" />
         <div>
           <Link href={`/account/${id}`}>
-            <div className="text-lg font-bold hover:underline cursor-pointer">
+            <div className="font-semibold text-lg cursor-pointer hover:underline">
               {name}
             </div>
-            <p className="text-sm text-gray-400 mt-1">{type.toUpperCase()} ACCOUNT</p>
-            <p className="text-green-400 font-semibold mt-2 text-md">
-              ${parseFloat(balance).toFixed(2)}
-            </p>
+            <p className="text-sm text-gray-700">{type.toUpperCase()} Account</p>
+            <p className="text-md font-medium mt-1">${parseFloat(balance).toFixed(2)}</p>
           </Link>
         </div>
       </div>
