@@ -27,8 +27,7 @@ export default function AddTransactionClient({ searchParams }) {
   }, [editId]);
 
   return (
-    <div>
-      <h1>{editId ? "Edit" : "Add"} Transaction</h1>
+    <div className="min-h-screen text-white p-8 bg-[linear-gradient(to_right,_#2d2d2d,_#1a1a1a)]">
       <TransactionForm
         accounts={accounts}
         categories={defaultCategories}
@@ -38,5 +37,3 @@ export default function AddTransactionClient({ searchParams }) {
     </div>
   );
 }
-
-
