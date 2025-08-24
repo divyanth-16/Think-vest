@@ -1,6 +1,6 @@
 import { Inter, Romanesco } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import Header from "../components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Footer } from "react-day-picker";
 import { Toaster } from "sonner";
