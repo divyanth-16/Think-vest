@@ -140,10 +140,7 @@ export default function TransactionForm() {
 
 
       <div className="max-w-2xl w-full mx-auto">
-        <div className="mb-10 text-center">
-          <h2 className="text-4xl font-extrabold text-white mb-3 tracking-tight">Add New Transaction</h2>
-          <p className="text-gray-400 text-lg">Effortlessly manage your finances with precise tracking.</p>
-        </div>
+        
 
         <div className="bg-gray-850 rounded-3xl p-8 sm:p-10 shadow-3xl border border-gray-700 relative overflow-hidden">
           {showSuccessMessage && (
