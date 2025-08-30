@@ -15,7 +15,7 @@ export default async function DashboardPage() {
   ]);
 
   const defaultAccount = accounts?.find((account) => account.isDefault);
-
+   console.log("hello");
 
   // Get budget for default account
   let budgetData = null;
