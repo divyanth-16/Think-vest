@@ -44,44 +44,6 @@ const Header = async () => {
           </SignedOut>
 
           <SignedIn>
-<<<<<<< HEAD
-          
-  {/* Dashboard Button */}
-
-  {/* Dashboard Button */}
- <Link
-  href="/dashboard"
-  className="px-5 py-2 rounded-lg font-semibold text-white 
-             bg-gradient-to-r from-[#2d2d2d] to-[#1a1a1a] 
-             hover:from-[#3a3a3a] hover:to-[#1e1e1e]
-             shadow-[0_0_10px_rgba(255,255,255,0.05)]
-             hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]
-             transition-all duration-300 ease-in-out 
-             backdrop-blur-sm border border-[#3d3d3d] 
-             hover:scale-105"
->
-  Dashboard
-</Link>
-
-<Link
-  href="/transaction/create"
-  className="px-5 py-2 rounded-lg font-semibold text-white 
-             bg-gradient-to-r from-[#28a745] to-[#34d058] 
-             hover:from-[#34d058] hover:to-[#28a745]
-             shadow-[0_0_10px_rgba(40,167,69,0.3)]
-             hover:shadow-[0_0_20px_rgba(40,167,69,0.6)]
-             transition-all duration-300 ease-in-out 
-             hover:scale-105"
->
-  + Add Transaction
-</Link>
-
-
-
-
-
-
-=======
             <div className="flex gap-4 items-center">
               {/* Dashboard Button */}
               <Link
@@ -90,7 +52,6 @@ const Header = async () => {
               >
                 Dashboard
               </Link>
->>>>>>> ee284457308e21644371c8511bac9745d9dd3e31
 
               {/* Add Transaction Button */}
               <Link
