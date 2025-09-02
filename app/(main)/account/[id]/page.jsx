@@ -1,5 +1,9 @@
+
 import { getAccountWithTransactions } from '@/actions/account';
 import React from 'react'
+import { TransactionTable } from '../_components/TransactionTable';
+import Chart from '../_components/Chart';
+
 
 export default async function AccountsPage({ params }) {
   const accountData = await getAccountWithTransactions(params.id);
@@ -19,8 +23,9 @@ export default async function AccountsPage({ params }) {
           <p>
             {account._count.transactions} Transactions
           </p>
+          <Chart transactions={transactions}/>
+          <TransactionTable transactions={transactions}/>
     </div>
-    
-  )
+    )
+   
 }
-

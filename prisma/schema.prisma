@@ -22,7 +22,7 @@ model User {
   name          String?
   imageUrl      String?
   transactions  Transaction[]
-  accounts      Account[]
+  accounts      Account[]   
   budgets       Budget[]
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt

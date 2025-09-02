@@ -1,19 +1,56 @@
 import { CreateAccountDrawer } from "@/components/create-account-drawer";
 import AccountLine from "./_components/AccountLine";
-import { getUserAccounts } from "@/actions/dashboard";
+import { getDashboardData, getUserAccounts } from "@/actions/dashboard";
 
+<<<<<<< HEAD
 // ✅ Must be an async function if using server-side data
 export default async function DashboardPage() {
   const accounts = await getUserAccounts();
+=======
+import { getCurrentBudget } from "@/actions/budget";
+import { Progress } from "./_components/Progress";
+import { Overview } from "./_components/Overview";
+
+
+// ✅ Must be an async function if using server-side data
+export default async function DashboardPage() {
+   const [accounts, transactions] = await Promise.all([
+    getUserAccounts(),
+    getDashboardData(),
+  ]);
+
+  const defaultAccount = accounts?.find((account) => account.isDefault);
+   console.log("hello");
+
+  // Get budget for default account
+  let budgetData = null;
+  if (defaultAccount) {
+    budgetData = await getCurrentBudget(defaultAccount.id);
+  }
+>>>>>>> ee284457308e21644371c8511bac9745d9dd3e31
 
   return (
     <div className="min-h-screen text-white p-8 bg-[linear-gradient(to_right,_#2d2d2d,_#1a1a1a)]">
 
+<<<<<<< HEAD
       {/* 🔥 Fancy Dashboard Title  shazia*/}
       <h1 className="text-5xl font-extrabold mb-10 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-white drop-shadow-md">
         Dashboard
       </h1>
 
+=======
+
+      {/* 🔥 Fancy Dashboard Title */}
+      <h1 className="text-5xl font-extrabold mb-10 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-white drop-shadow-md">
+        Dashboard
+      </h1>
+      <Progress    initialBudget={budgetData?.budget}
+        currentExpenses={budgetData?.currentExpenses || 0}/>
+
+      <Overview accounts={accounts}
+        transactions={transactions || []}
+      />
+>>>>>>> ee284457308e21644371c8511bac9745d9dd3e31
       {/* ➕ Add Account Button */}
       <div className="mb-10">
         <CreateAccountDrawer>
