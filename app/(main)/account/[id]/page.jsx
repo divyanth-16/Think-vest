@@ -6,7 +6,8 @@ import Chart from '../_components/Chart';
 
 
 export default async function AccountsPage({ params }) {
-  const accountData = await getAccountWithTransactions(params.id);
+   const { id } = await params; // ✅ Await params
+  const accountData = await getAccountWithTransactions(id);
 
   const {transactions, ...account } = accountData
 
